@@ -5,7 +5,7 @@
 <div class='row'>
   <% @cocktails.each do |cocktail| %>
   <div class="card col-md-4 col-sm-12" style="width: 18rem;">
-  <%= image_tag "https://source.unsplash.com/featured/?cocktail", width: 400, height: 300, crop: :fit %>
+  <%= cl_image_tag cocktail.img, width: 400, height: 300, crop: :fit %>
   <div class="card-body">
     <h5 class="card-title"><%=cocktail.name%></h5>
    <%=link_to 'Details', cocktail_path(cocktail), class: 'btn btn-primary'%>
