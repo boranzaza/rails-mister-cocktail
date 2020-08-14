@@ -1,15 +1,16 @@
 <h1>Welcome to Boran's Cocktails</h1>
 
-<ul>
+<a href="/cocktails/new">Add a new cocktail!</a>
+
+<div class='row'>
   <% @cocktails.each do |cocktail| %>
-  <div class="card" style="width: 18rem;">
+  <div class="card col-md-4 col-sm-12" style="width: 18rem;">
   <img src="https://source.unsplash.com/featured/?cocktail" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%=cocktail.name%></h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="" class="btn btn-primary"><%=link_to cocktail.name, cocktail_path(cocktail)%></a>
+   <%=link_to 'Details', cocktail_path(cocktail), class: 'btn btn-primary'%>
   </div>
 </div>
   <% end %>
-</ul>
+</div>
 
